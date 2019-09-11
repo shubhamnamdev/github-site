@@ -8,9 +8,6 @@ fields:
 - type: datetime
   name: date
   label: date
-- type: datetime
-  name: lastmod
-  label: lastmod
 - type: list
   name: tags
   label: tags
@@ -20,6 +17,3 @@ fields:
 - type: text
   name: summary
   label: summary
-- type: boolean
-  name: toc
-  label: toc
