@@ -1,0 +1,24 @@
+language: ruby
+
+install: gem install jekyll
+script: scripts/build.sh
+
+# branch whitelist
+branches:
+  only:
+  - master
+  - gh-pages     # test the gh-pages branch
+  - /pages-(.*)/ # test every branch which starts with "pages-"
+
+before_install:
+  - chmod +x scripts/build.sh
+  
+deploy:
+  provider: pages
+  repo: shubhamnamdev/shubhamnamdev.github.io
+  target-branch: master
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _site
+  on:
+    branch: master
