@@ -1,0 +1,30 @@
+title: "My Workbook"
+description : "This website contains my notes"
+baseurl : ""
+author: "Shubham Namdev"
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:title.html
+      author: "Shubham Namdev"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+highlighter: rouge
